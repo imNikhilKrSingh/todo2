@@ -1,7 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-
-
+import { AiFillDelete } from "react-icons/ai";
 
 
 function App() {
@@ -9,14 +8,21 @@ function App() {
 const [input, setInput] = useState("");
 const [list, setList] = useState([]);
 
-const handleInput =(e)=>{
+const handleInput = (e)=>{
   setInput(e.target.value);
 }
 
-const handleTask =()=>{
+const handleTask = ()=>{
   setList([...list, input]);
   setInput("");
 }
+
+const handleDelete = (index)=>{
+  const filterList = list.filter((elem)=> elem !== list[index])
+  setList(filterList);
+  
+}
+
 
   return (
     <div className="App">
@@ -27,7 +33,8 @@ const handleTask =()=>{
         </div>
         <div className="list">
           <ul>
-            {list.map((item, index)=><li key={index}>{item} </li>)}
+            {list.map((item, index)=><li key={index} onClick={()=>handleDelete(index)}>{item} 
+            <AiFillDelete/> </li>)}
           </ul>
         </div>
       </div>
