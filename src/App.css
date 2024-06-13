@@ -11,8 +11,24 @@
   max-width: 500px;
   font-size: 16px;
   margin: 0   auto;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  min-height: 300px;
+  font-size: 18px;
+  padding-top: 20px;
+  border-radius: 15px;
 }
 
 .list{
   text-align: left;
-}
+ }
+
+ .list ul{
+  padding-left: 0;
+ }
+
+ .list ul li{
+  background-color: #2C3335;
+  color: white;
+  padding: 5px;
+  margin-bottom: 4px ;  
+ }

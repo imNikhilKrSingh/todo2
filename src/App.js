@@ -15,6 +15,7 @@ const handleInput =(e)=>{
 
 const handleTask =()=>{
   setList([...list, input]);
+  setInput("");
 }
 
   return (
@@ -26,8 +27,7 @@ const handleTask =()=>{
         </div>
         <div className="list">
           <ul>
-
-            {list.map((item, index)=><li>{item} </li>)}
+            {list.map((item, index)=><li key={index}>{item} </li>)}
           </ul>
         </div>
       </div>
