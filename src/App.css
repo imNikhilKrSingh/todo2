@@ -33,3 +33,8 @@
   margin-bottom: 4px ;  
  }
 
+ .deleteIcon {
+ position: relative;
+ float: right;
+ /* background-color: yellow; */
+}

@@ -33,8 +33,9 @@ const handleDelete = (index)=>{
         </div>
         <div className="list">
           <ul>
-            {list.map((item, index)=><li key={index} onClick={()=>handleDelete(index)}>{item} 
-            <AiFillDelete/> </li>)}
+            {list.map((item, index)=><li key={index}>{item} 
+              
+            <AiFillDelete className="deleteIcon" onClick={()=>handleDelete(index)}/> </li>)}
           </ul>
         </div>
       </div>
