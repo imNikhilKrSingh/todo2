@@ -47,12 +47,12 @@ const handleEdit = (index)=>{
 
       <div className="container">
         <div className="input-box">
-          <input type="text" value={input} onChange={(e)=>handleInput(e)} placeholder="Enter your task..."/>
-          { update ? <button onClick={handleUpdate}> Update Task </button> :
-            <button onClick={handleTask}> Add Task </button> }
+          <input className="inputBox" type="text" value={input} onChange={(e)=>handleInput(e)} placeholder="Enter your task..."/>
+          { update ? <button className="updateTaskButton" onClick={handleUpdate}> Update Task </button> :
+            <button className= "addTaskButton" onClick={handleTask}> Add Task </button> }
         </div>
 
-
+        <br></br>
         <div className="list">
           <ul>
             {list.map((item, index)=><li key={index}>{item}               
